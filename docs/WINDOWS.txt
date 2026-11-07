@@ -1,0 +1,33 @@
+CANADAVERSE LAUNCHER 0.2.0-preview.1
+
+Extract this ZIP, then open CanadaverseLauncher.exe.
+Requires Windows 10/11 and .NET Framework 4.8. No Python required.
+
+SETUP
+1. Select ProjectMidas.exe, or click Install pinned engine.
+   If downloading fails, get the official Windows ZIP in your browser:
+   https://github.com/murkantor/Project-Midas/releases/tag/1.0.2b
+   Then choose Install engine ZIP. Its checksum will be verified.
+2. Select your own GoldenEye 007 USA .z64 ROM or ZIP backup.
+3. Save setup, then Verify files and Play GoldenEye.
+
+Supported ROM SHA1: abe01e4aeb033b6c0836819f549c791b26cfde83
+Project Midas: 1.0.2b preview. Downloads come from the official upstream
+GitHub release and are SHA256 checked. No game or engine is bundled here.
+
+ROOMS
+Staging-room discovery only. Online matches are not implemented.
+The default lobbies.canadaverse.org service awaits deployment. Change
+the server in Setup to use your own directory. Local play works offline.
+
+Your chosen room name, host name and build metadata are public when
+you create a room. Your ROM, save files and local paths are never uploaded.
+
+Settings and ROM cache: %LOCALAPPDATA%\Canadaverse007
+Portable profile: create a portable folder beside the executable, or use
+CanadaverseLauncher.exe --state-dir YOUR_FOLDER
+Saves: beside your selected ProjectMidas.exe.
+
+This executable is unsigned. See SHA256SUMS.txt on the release page.
+Source: https://github.com/n30nex/canadaverse-007
+Independent fan tooling; not affiliated with the game rights holders.

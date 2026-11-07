@@ -1,0 +1,27 @@
+[Unit]
+Description=Canadaverse 007 staging room directory
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+StateDirectory=canadaverse-007
+WorkingDirectory=/opt/canadaverse-007/current
+Environment=ROOM_DB=/var/lib/canadaverse-007/rooms.sqlite3
+Environment=TRUST_CLOUDFLARE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/canadaverse-007/current/.venv/bin/python -m uvicorn server.app:app --host 127.0.0.1 --port 18707 --workers 1 --no-proxy-headers --no-access-log
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
